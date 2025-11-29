@@ -3,236 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnologías Avanzadas de Interconexión y Teleproceso Crítico</title>
+    <title>Informe - Teleprocesos</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#1E40AF', /* Azul Oscuro (ej. Indigo 800) */
-                        'secondary': '#374151', /* Gris Oscuro (ej. Gray 700) */
-                        'accent': '#3B82F6', /* Azul Brillante (ej. Blue 500) */
-                        'background-light': '#F9FAFB', /* Fondo muy claro */
-                        'card-bg': '#FFFFFF',
+                        primary: '#1e40af',
+                        secondary: '#3b82f6',
+                        accent: '#60a5fa'
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-background-light font-sans text-secondary">
-    <div class="container mx-auto p-4 sm:p-8 lg:p-12">
-        <header class="text-center mb-10 p-6 bg-card-bg shadow-lg rounded-lg border-t-4 border-primary">
-            <h1 class="text-4xl font-extrabold text-primary mb-2">Tecnologías Avanzadas de Interconexión y Teleproceso Crítico</h1>
-            <p class="text-lg text-secondary">Este informe profundiza en las arquitecturas, protocolos y marcos de seguridad que definen la próxima generación de acceso remoto y teleproceso empresarial.</p>
-        </header>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Encabezado -->
+    <header class="bg-primary text-white py-4 px-6 shadow-md">
+        <h1 class="text-2xl font-bold text-center">Teleprocesos</h1>
+    </header>
 
-        <main class="space-y-12">
-            
-            <section id="arquitecturas-fundacionales" class="bg-card-bg p-6 lg:p-10 rounded-xl shadow-xl">
-                <h2 class="text-3xl font-bold text-secondary border-l-4 border-accent pl-4 mb-6">I. Arquitecturas Fundacionales: SASE y SD-WAN</h2>
+    <!-- Contenido principal -->
+    <main class="max-w-6xl mx-auto py-6 px-4">
+        <!-- Título del tema -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-3xl font-bold text-center text-primary">Tecnologías Avanzadas de Interconexión para Teleproceso y Acceso Remoto</h2>
+        </div>
 
-                <article class="mb-8">
-                    <h3 class="text-2xl font-semibold text-primary mb-4">1. SD-WAN Avanzada: La Red que Prioriza la Aplicación</h3>
-                    <p class="mb-4">El **SD-WAN (Software-Defined Wide Area Network)** se ha convertido en la columna vertebral de la conectividad moderna, superando las limitaciones del antiguo y rígido MPLS. Su clave reside en la **Selección Dinámica de Path**, que evalúa en tiempo real la calidad de servicio (QoS) de múltiples enlaces de red subyacentes.</p>
+        <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Panel izquierdo con datos del estudiante -->
+            <div class="lg:w-1/4">
+                <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-xl font-bold text-primary mb-4">Datos del Estudiante</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Nombre:</label>
+                            <div class="mt-1 p-2 bg-gray-100 rounded-md border border-gray-300">
+                                Maria Teresa Vasquez
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Cédula de Identidad:</label>
+                            <div class="mt-1 p-2 bg-gray-100 rounded-md border border-gray-300">
+                               30741772
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="p-4 bg-blue-50 border-l-4 border-accent rounded-md mb-6">
-                        <p class="font-bold text-lg text-accent">🎯 Propósito Clave</p>
-                        <p>Asegurar **QoS y SLA (Acuerdo de Nivel de Servicio)**. Garantiza que las aplicaciones de negocio (ERP, VoIP, Videoconferencia) obtengan el ancho de banda y la calidad de enlace prometidos, independientemente de la infraestructura subyacente.</p>
-                        <ul class="list-disc ml-6 mt-2 text-sm">
-                            <li>**TCP Optimization:** Técnicas para reducir la latencia de reconocimiento de TCP, vitales para aplicaciones transaccionales sensibles.</li>
-                            <li>**Cloud Gateways:** Puntos de entrada optimizados en la nube que actúan como "rampas de acceso rápido" a arquitecturas **Multi-Cloud**.</li>
+                <!-- Índice interactivo -->
+                <div class="bg-white p-6 rounded-lg shadow-md sticky top-6">
+                    <h3 class="text-xl font-bold text-primary mb-4">Índice</h3>
+                    <nav>
+                        <ul class="space-y-2">
+                            <li><a href="#sdwan" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                <span class="mr-2">🗺️</span> SD-WAN y Selección Dinámica de Path
+                            </a></li>
+                            <li><a href="#sase" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                <span class="mr-2">🛡️</span> SASE: Convergencia de Red y Seguridad
+                            </a></li>
+                            <li><a href="#quic" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                <span class="mr-2">🚀</span> QUIC y el Protocolo Cero-RTT
+                            </a></li>
+                            <li><a href="#zerotrust" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                <span class="mr-2">🔒</span> Zero Trust: Identidad como Perímetro
+                            </a></li>
+                            <li><a href="#ibn" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                <span class="mr-2">🧠</span> Intent-Based Networking (IBN)
+                            </a></li>
+                            <li><a href="#cnf" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                <span class="mr-2">📦</span> Containerized Network Functions (CNF)
+                            </a></li>
+                            <li><a href="#slicing" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                <span class="mr-2">📶</span> Network Slicing en 5G
+                            </a></li>
                         </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Contenido del informe -->
+            <div class="lg:w-3/4">
+                <!-- Sección 1 -->
+                <section id="sdwan" class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h2 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">🗺️</span> SD-WAN y Selección Dinámica de Path
+                    </h2>
+                    <div class="space-y-4">
+                        <p>SD-WAN (Software-Defined Wide Area Network) transforma las redes de área extensa de una colección de enlaces estáticos a una arquitectura de orquestación inteligente que separa el plano de control (la lógica) del plano de datos (el transporte). Este diseño ofrece una gestión centralizada y una visibilidad profunda que es imposible en las arquitecturas WAN tradicionales.</p>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary">
+                            <h3 class="text-lg font-bold text-primary mb-2">Concepto Central: Selección Dinámica de Path (Dynamic Path Selection)</h3>
+                            <p><strong>Definición:</strong> Es la capacidad fundamental de la arquitectura SD-WAN de evaluar en tiempo real la calidad de servicio (QoS) de múltiples enlaces de red subyacentes (MPLS, Internet de banda ancha, 5G, LTE) y dirigir el tráfico de cada aplicación o flujo de datos por el camino que mejor cumpla con sus requisitos de rendimiento predefinidos (incluyendo latencia, pérdida de paquetes y jitter).</p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <h3 class="text-lg font-bold text-green-700 mb-2">Valor Clave</h3>
+                            <p>Asegura la Quality of Experience (QoE) para aplicaciones críticas (como VoIP o escritorios virtuales) al evitar automáticamente los enlaces degradados. Además de la conmutación de path (cambio de ruta), SD-WAN aplica técnicas avanzadas como Duplicación de Paquetes para alta disponibilidad y Forward Error Correction (FEC), donde se envían datos de paridad redundantes para mitigar las pérdidas de paquetes sin necesidad de retransmisión.</p>
+                        </div>
                     </div>
+                </section>
 
-                    <h4 class="text-xl font-medium text-secondary mb-3 border-b pb-2">⚠️ Desafío y Solución SD-WAN</h4>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-sm text-left text-secondary border border-gray-200">
-                            <thead class="text-xs text-white uppercase bg-primary">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">Desafío</th>
-                                    <th scope="col" class="px-6 py-3">Solución SD-WAN</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="bg-white border-b hover:bg-gray-50">
-                                    <td class="px-6 py-4 font-semibold text-gray-900 whitespace-nowrap">Pérdida de Paquetes (Internet)</td>
-                                    <td class="px-6 py-4">**Forward Error Correction (FEC)**: Reconstruye paquetes perdidos localmente sin requerir retransmisión, mejorando el rendimiento del tráfico en tiempo real.</td>
-                                </tr>
-                                <tr class="bg-gray-50 border-b hover:bg-gray-100">
-                                    <td class="px-6 py-4 font-semibold text-gray-900 whitespace-nowrap">Congestión</td>
-                                    <td class="px-6 py-4">**Application-Aware Routing**: Dirige automáticamente el tráfico de baja prioridad a enlaces más económicos, reservando los enlaces premium para el tráfico crítico.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <!-- Sección 2 -->
+                <section id="sase" class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h2 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">🛡️</span> SASE: Convergencia de Red y Seguridad
+                    </h2>
+                    <div class="space-y-4">
+                        <p>SASE (Secure Access Service Edge) define la arquitectura futura para la entrega de servicios de red y seguridad. Está diseñado específicamente para la era del trabajo distribuido y el acceso a recursos en la nube.</p>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary">
+                            <h3 class="text-lg font-bold text-primary mb-2">Concepto Central: Convergencia de la Nube (Cloud Convergence)</h3>
+                            <p><strong>Definición:</strong> SASE es el modelo que unifica la conectividad de red proporcionada por SD-WAN y las funciones de seguridad de vanguardia basadas en la nube (Cloud Security) en una única plataforma de servicio. Al estar basado en la nube, el perímetro de seguridad se descentraliza del datacenter corporativo y se acerca al usuario o al borde (Edge).</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <h3 class="text-lg font-bold text-purple-700 mb-2">Servicios Unificados</h3>
+                            <p>Esta plataforma incluye funciones de seguridad críticas como Firewall as a Service (FWaaS), Secure Web Gateway (SWG) para inspección de tráfico web, Cloud Access Security Broker (CASB) para proteger aplicaciones SaaS, y especialmente Zero Trust Network Access (ZTNA).</p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <h3 class="text-lg font-bold text-green-700 mb-2">Valor Clave</h3>
+                            <p>Proporciona un perímetro de seguridad coherente y elástico que sigue al usuario y al dispositivo, independientemente de si se conectan desde una sucursal o de forma remota. Esto simplifica drásticamente la gestión y asegura que las políticas de seguridad sean uniformes, independientemente del punto de acceso.</p>
+                        </div>
                     </div>
-                </article>
+                </section>
 
-                <article>
-                    <h3 class="text-2xl font-semibold text-primary mb-4">2. SASE: El Futuro del Perímetro de Seguridad</h3>
-                    <p class="mb-4">**SASE (Secure Access Service Edge)** es el modelo de entrega que **unifica SD-WAN (la red)** y las funciones de seguridad basadas en la nube en una única plataforma. Resuelve el problema de cómo proteger a un usuario que ya no se encuentra detrás del *firewall* de la oficina. </p>
-
-                    <h4 class="text-xl font-medium text-secondary mb-3 border-b pb-2">🔒 Componentes de Seguridad Integrados</h4>
-                    <ul class="list-disc ml-6 space-y-2 mb-4">
-                        <li>**FWaaS (Firewall as a Service):** Inspección de tráfico de red entregada desde un Punto de Presencia (PoP) en la nube.</li>
-                        <li>**CASB (Cloud Access Security Broker):** Aplica políticas de seguridad entre los usuarios y los proveedores de servicios en la nube (SaaS), controlando Shadow IT.</li>
-                        <li>**SWG (Secure Web Gateway):** Protección contra amenazas web y filtrado de contenido para el tráfico de Internet.</li>
-                        <li>**ZTNA (Zero Trust Network Access):** La base del modelo, garantizando que el acceso se otorga solo después de una verificación continua.</li>
-                    </ul>
-                    <p class="font-semibold text-lg text-secondary">Valor Clave:</p>
-                    <p>Proporciona un **perímetro de seguridad coherente y elástico** que sigue al usuario y al dispositivo, simplificando la gestión y garantizando políticas uniformes para el trabajo híbrido.</p>
-                </article>
-            </section>
-
-            
-            <section id="protocolos-y-redes" class="bg-card-bg p-6 lg:p-10 rounded-xl shadow-xl">
-                <h2 class="text-3xl font-bold text-secondary border-l-4 border-accent pl-4 mb-6">II. Protocolos y Redes de Alta Performance</h2>
-
-                <article class="mb-8">
-                    <h3 class="text-2xl font-semibold text-primary mb-4">3. QUIC: El Protocolo Anti-Latencia</h3>
-                    <p class="mb-4">**QUIC (Quick UDP Internet Connections)** es el protocolo de transporte de próxima generación (base de HTTP/3) diseñado para mejorar la velocidad y la fiabilidad de las aplicaciones web y el acceso remoto. Corre sobre UDP.</p>
-                    
-                    <div class="p-4 bg-indigo-50 border-l-4 border-primary rounded-md mb-6">
-                        <p class="font-bold text-lg text-primary">⚡ Concepto Central: Handshake 0-RTT.</p>
-                        <p>La capacidad de establecer una conexión segura y **enviar datos** en la primera interacción después de la conexión inicial, reduciendo drásticamente la **latencia percibida** y acelerando el inicio de las aplicaciones.</p>
+                <!-- Sección 3 -->
+                <section id="quic" class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h2 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">🚀</span> QUIC y el Protocolo Cero-RTT
+                    </h2>
+                    <div class="space-y-4">
+                        <p>QUIC (Quick UDP Internet Connections) es un protocolo de transporte de próxima generación desarrollado por Google y estandarizado por el IETF, diseñado para mejorar significativamente la velocidad y la fiabilidad de las aplicaciones web sobre UDP en lugar de TCP.</p>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary">
+                            <h3 class="text-lg font-bold text-primary mb-2">Concepto Central: Handshake 0-RTT (Cero Tiempo de Ida y Vuelta)</h3>
+                            <p><strong>Definición:</strong> Es la capacidad de QUIC de establecer una conexión segura TLS 1.3 y enviar datos de aplicación en la primera interacción después de la conexión inicial. En la práctica, esto significa que el cliente (si ya se ha conectado al servidor antes) puede enviar la solicitud HTTP y la clave de cifrado en el mismo paquete.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                            <h3 class="text-lg font-bold text-yellow-700 mb-2">Contraste con TCP/TLS</h3>
+                            <p>El protocolo TCP/TLS requiere al menos 3 a 5 intercambios de paquetes (RTTs) para completar el handshake (primero el de TCP, luego el de TLS) antes de que se puedan enviar datos de aplicación. QUIC reduce esto a cero RTTs en el caso de sesiones reanudadas. [Image comparing QUIC 0-RTT handshake latency with TCP/TLS 3-way handshake latency]</p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <h3 class="text-lg font-bold text-green-700 mb-2">Valor Clave</h3>
+                            <p>Reduce drásticamente la latencia percibida y acelera el inicio de la navegación y las aplicaciones. Además, su arquitectura de multiplexación de streams independientes a nivel de UDP evita el problema de Head-of-Line Blocking inherente a TCP: la pérdida de un paquete en un stream de datos no afecta el procesamiento de los paquetes en otros streams de la misma conexión QUIC.</p>
+                        </div>
                     </div>
+                </section>
 
-                    <h4 class="text-xl font-medium text-secondary mb-3 border-b pb-2">Detalles Técnicos Adicionales</h4>
-                    <ul class="list-disc ml-6 space-y-2">
-                        <li>**Multiplexing Independiente:** La pérdida de paquetes en un *stream* **no bloquea** a otros *streams* que comparten la misma conexión QUIC, evitando el problema de *Head-of-Line Blocking* de TCP.</li>
-                        <li>**Movilidad (Connection Migration):** La conexión persiste si el usuario cambia de red (ej. de Wi-Fi a 5G) gracias a un **Connection ID** único.</li>
-                    </ul>
-                </article>
-
-                <article>
-                    <h3 class="text-2xl font-semibold text-primary mb-4">4. WebRTC: La Interacción en Tiempo Real</h3>
-                    <p class="mb-4">**WebRTC (Web Real-Time Communication)** es un conjunto de protocolos que permite la comunicación **peer-to-peer (P2P)** de baja latencia (audio, video, datos) directamente entre navegadores o aplicaciones.</p>
-
-                    <h4 class="text-xl font-medium text-secondary mb-3 border-b pb-2">🛠️ Aplicaciones Críticas en Teleproceso</h4>
-                    <ul class="list-disc ml-6 space-y-2">
-                        <li>**Sesiones Interactivas de Soporte Técnico:** Permite a los técnicos ver y tomar el control de una pantalla remota (*screen sharing*) con una latencia mínima.</li>
-                        <li>**Transferencia P2P Segura:** Facilita el envío eficiente de grandes volúmenes de datos directamente entre dos puntos, utilizando menos recursos de red central.</li>
-                    </ul>
-                </article>
-            </section>
-
-            
-            <section id="virtualizacion-y-agilidad" class="bg-card-bg p-6 lg:p-10 rounded-xl shadow-xl">
-                <h2 class="text-3xl font-bold text-secondary border-l-4 border-accent pl-4 mb-6">III. Flexibilidad y Agilidad: Virtualización (NFV/CNF)</h2>
-
-                <article class="mb-8">
-                    <h3 class="text-2xl font-semibold text-primary mb-4">5. NFV y la Arquitectura vCPE</h3>
-                    <p class="mb-4">La **Virtualización de Funciones de Red (NFV)** separa las funciones de red (router, firewall) del hardware dedicado, ejecutándolas como software en servidores genéricos (*commodity*).</p>
-
-                    <div class="p-4 bg-green-50 border-l-4 border-green-600 rounded-md">
-                        <p class="font-bold text-lg text-green-700">vCPE (Virtual Customer Premises Equipment):</p>
-                        <p>Consolidación de múltiples funciones de red en una única plataforma de hardware genérico (*White Box*) en la sucursal. Permite la **agilidad en el despliegue** mediante el encadenamiento de servicios (*service chaining*) y la modificación de servicios por software.</p>
+                <!-- Sección 4 -->
+                <section id="zerotrust" class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h2 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">🔒</span> Zero Trust: Identidad como Perímetro
+                    </h2>
+                    <div class="space-y-4">
+                        <p>La Arquitectura Zero Trust (ZTA) es el marco de seguridad dominante para el acceso remoto y la protección de infraestructuras modernas. Su filosofía es contraria al modelo de "castillo y foso" tradicional, que confiaba en todo lo que estaba dentro del perímetro de la red.</p>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary">
+                            <h3 class="text-lg font-bold text-primary mb-2">Concepto Central: Nunca Confíes, Siempre Verifica (Never Trust, Always Verify)</h3>
+                            <p><strong>Definición:</strong> Es un modelo de seguridad donde no se otorga confianza implícita a ningún usuario, dispositivo o recurso, incluso si ya está dentro de la red corporativa. Cada solicitud de acceso es estrictamente validada, autenticada y autorizada basada en la identidad del usuario, la salud (postura de seguridad) del dispositivo y el contexto (ubicación, hora del día).</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <h3 class="text-lg font-bold text-purple-700 mb-2">Microsegmentación y Políticas</h3>
+                            <p>El acceso se concede utilizando el principio del Mínimo Privilegio (Least Privilege), a través de la Microsegmentación. Esto garantiza que los usuarios remotos solo puedan acceder a los recursos específicos que necesitan (por ejemplo, una sola base de datos), limitando de manera efectiva el movimiento lateral de posibles atacantes que hayan comprometido un endpoint. [Image illustrating Zero Trust Microsegmentation where access is restricted to specific resources based on user identity and device health]</p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <h3 class="text-lg font-bold text-green-700 mb-2">Valor Clave</h3>
+                            <p>El perímetro de la red se convierte en la identidad. La ZTA garantiza que el acceso a recursos críticos para el teleproceso esté siempre protegido, independientemente de la ubicación del usuario, minimizando la superficie de ataque.</p>
+                        </div>
                     </div>
-                </article>
+                </section>
 
-                <article>
-                    <h3 class="text-2xl font-semibold text-primary mb-4">6. Containerized Network Functions (CNF)</h3>
-                    <p class="mb-4">Los **CNF** son la evolución de NFV, aprovechando la eficiencia de los contenedores para el empaquetamiento y la orquestación. Son ideales para la capacidad bajo demanda en servicios de acceso remoto.</p>
-
-                    <ul class="list-disc ml-6 space-y-2">
-                        <li>**Orquestación Kubernetes:** Permite el **auto-escalado horizontal** de las réplicas (ej. *gateways* VPN) y realiza actualizaciones y *rollbacks* con **cero tiempo de inactividad** (*zero-downtime*).</li>
-                        <li>**Ventaja de Agilidad:** Los contenedores son más ligeros que las VMs, lo que resulta en un **inicio casi instantáneo** y una mayor densidad de servicios. Son ideales para ser desplegados, actualizados y escalados con una velocidad sin precedentes.</li>
-                    </ul>
-                </article>
-            </section>
-
-            
-            <section id="seguridad-y-automatizacion" class="bg-card-bg p-6 lg:p-10 rounded-xl shadow-xl">
-                <h2 class="text-3xl font-bold text-secondary border-l-4 border-accent pl-4 mb-6">IV. Seguridad y Automatización de Próxima Generación</h2>
-
-                <article class="mb-8">
-                    <h3 class="text-2xl font-semibold text-primary mb-4">7. Zero Trust Architecture (ZTA) y SDP</h3>
-                    <p class="mb-4">El marco de seguridad dominante para el acceso remoto. El acceso se otorga solo después de una **evaluación continua** del usuario, el dispositivo y el contexto.</p>
-                    
-                    <div class="p-4 bg-red-50 border-l-4 border-red-600 rounded-md mb-6">
-                        <p class="font-bold text-lg text-red-700">Principio: Nunca Confíes, Siempre Verifica.</p>
-                        <p>Implementa el **Mínimo Privilegio** (*Least Privilege*) a través de la **Microsegmentación** para limitar el movimiento lateral de un atacante.</p>
+                <!-- Sección 5 -->
+                <section id="ibn" class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h2 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">🧠</span> Intent-Based Networking (IBN)
+                    </h2>
+                    <div class="space-y-4">
+                        <p>IBN representa la evolución de la automatización en la gestión de redes, moviéndose de la gestión reactiva basada en comandos a un modelo proactivo basado en la automatización del backend.</p>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary">
+                            <h3 class="text-lg font-bold text-primary mb-2">Concepto Central: Gestión Declarativa de la Red (Declarative Network Management)</h3>
+                            <p><strong>Definición:</strong> En lugar de que el administrador le diga a la red cómo lograr un resultado (por ejemplo, configurando manualmente comandos CLI en miles de dispositivos), el administrador simplemente declara qué resultado se desea (la Intención de Negocio). El sistema IBN (el controlador de red) se encarga de traducir automáticamente esa intención en políticas, implementarlas en toda la infraestructura y verificar continuamente que la red cumpla con el objetivo declarado.</p>
+                        </div>
+                        
+                        <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h3 class="text-lg font-bold text-indigo-700 mb-2">Ciclo de Vida del IBN</h3>
+                            <p>El ciclo consta de tres fases principales:</p>
+                            <ol class="list-decimal pl-6 mt-2 space-y-2">
+                                <li><strong>Traducción y Activación:</strong> Traducir la intención a políticas de red.</li>
+                                <li><strong>Assurance (Validación Continua):</strong> Monitorear la red en tiempo real para asegurar que la intención se cumpla.</li>
+                                <li><strong>Self-Healing (Auto-reparación):</strong> Detectar desviaciones (fallos o violaciones de políticas) y tomar medidas automáticas para corregirlas.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <h3 class="text-lg font-bold text-green-700 mb-2">Valor Clave</h3>
+                            <p>Habilita un ciclo de vida automatizado y de auto-reparación de la red. Para el teleproceso, reduce drásticamente la complejidad operativa y asegura que las políticas de acceso remoto crítico (como priorización de tráfico de escritorios virtuales) se mantengan sin intervención manual y se auto-ajusten a las condiciones cambiantes.</p>
+                        </div>
                     </div>
+                </section>
 
-                    <h4 class="text-xl font-medium text-secondary mb-3 border-b pb-2">Componentes Específicos para Teleproceso</h4>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-sm text-left text-secondary border border-gray-200">
-                            <thead class="text-xs text-white uppercase bg-red-600">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">Componente ZTA</th>
-                                    <th scope="col" class="px-6 py-3">Acción Clave</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="bg-white border-b hover:bg-gray-50">
-                                    <td class="px-6 py-4 font-semibold text-gray-900 whitespace-nowrap">Gobernanza de Identidad</td>
-                                    <td class="px-6 py-4">**Multi-Factor Authentication (MFA) Requerido** y **Chequeo de Salud del Dispositivo** (antivirus, parches) antes de otorgar acceso.</td>
-                                </tr>
-                                <tr class="bg-gray-50 border-b hover:bg-gray-100">
-                                    <td class="px-6 py-4 font-semibold text-gray-900 whitespace-nowrap">SDP (Software Defined Perimeter)</td>
-                                    <td class="px-6 py-4">**"Black Cloud":** El Host de la aplicación corporativa solo se revela al cliente **después** de la autenticación y autorización exitosa. Si falla, el recurso es lógicamente invisible.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <!-- Sección 6 -->
+                <section id="cnf" class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h2 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">📦</span> Containerized Network Functions (CNF)
+                    </h2>
+                    <div class="space-y-4">
+                        <p>CNF es la metodología de despliegue más ágil y eficiente para las funciones de red, representando un paso evolutivo de las Funciones de Red Virtualizadas (VNF) tradicionales que corrían sobre Máquinas Virtuales (VMs).</p>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary">
+                            <h3 class="text-lg font-bold text-primary mb-2">Concepto Central: Inmutabilidad y Microservicios Ligeros</h3>
+                            <p><strong>Definición:</strong> Es la práctica de empaquetar funciones de red virtualizadas (como un vRouter, vFirewall, o un gateway SD-WAN) dentro de contenedores ligeros (ej. Docker) y orquestarlos utilizando plataformas de código abierto como Kubernetes.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                            <h3 class="text-lg font-bold text-yellow-700 mb-2">Ventaja sobre VM</h3>
+                            <p>A diferencia de las VMs, que requieren una copia completa del sistema operativo (OS) invitado, los CNFs comparten el kernel del sistema operativo del host. Esto los hace mucho más ligeros, inmutables (no se modifican una vez desplegados) y les permite iniciarse en segundos o milisegundos. [Image comparing Containerized Network Functions (CNF) architecture with Virtualized Network Functions (VNF) architecture highlighting shared kernel vs. dedicated guest OS]</p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <h3 class="text-lg font-bold text-green-700 mb-2">Valor Clave</h3>
+                            <p>Proporciona escalabilidad elástica de alto rendimiento y un despliegue bajo demanda. Esto es crucial para servicios de acceso remoto (por ejemplo, escalar automáticamente los gateways VPN o los puntos de presencia SASE según la carga máxima de usuarios remotos que necesitan conectarse en un momento dado).</p>
+                        </div>
                     </div>
-                </article>
+                </section>
 
-                <article>
-                    <h3 class="text-2xl font-semibold text-primary mb-4">8. AIOps e Intent-Based Networking (IBN)</h3>
-                    <p class="mb-4">Estas tecnologías garantizan que la promesa de alto rendimiento y seguridad se mantenga de forma autónoma.</p>
-                    
-                    <ul class="list-disc ml-6 space-y-2">
-                        <li>**IBN - Gestión Declarativa:** El administrador declara la **Intención de Negocio** (ej. "Optimizar videollamadas") y el sistema implementa, valida (*Assurance*) y corrige (*Remediation*) automáticamente las políticas necesarias para el cumplimiento.</li>
-                        <li>**AIOps - Capacidad Predictiva:** Utiliza Machine Learning para analizar tendencias históricas de acceso remoto y **predecir** cuándo la demanda de recursos superará la capacidad actual, escalando preventivamente.</li>
-                        <li>**AIOps - Anomaly Detection:** Identificación de patrones de acceso o tráfico inusuales en tiempo real para el diagnóstico automático.</li>
-                    </ul>
-                </article>
-            </section>
-            
-            <section id="tendencias-y-roi" class="bg-card-bg p-6 lg:p-10 rounded-xl shadow-xl">
-                <h2 class="text-3xl font-bold text-secondary border-l-4 border-accent pl-4 mb-6">V. Tendencias Futuras y ROI</h2>
+                <!-- Sección 7 -->
+                <section id="slicing" class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <h2 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <span class="mr-3 text-3xl">📶</span> Network Slicing en 5G
+                    </h2>
+                    <div class="space-y-4">
+                        <p>El Network Slicing es una de las promesas más transformadoras de la tecnología 5G para el teleproceso especializado y la infraestructura crítica.</p>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary">
+                            <h3 class="text-lg font-bold text-primary mb-2">Concepto Central: Redes Lógicas Virtuales Aisladas (Isolated Virtual Networks)</h3>
+                            <p><strong>Definición:</strong> Es la capacidad de tomar una única infraestructura de red física 5G (torres, backhaul, core) y dividirla en múltiples redes virtuales lógicas e independientes (los slices o rebanadas). Cada slice se provisiona con sus propios recursos de computación, storage y ancho de banda, y está optimizado con garantías de SLA (Acuerdo de Nivel de Servicio) para un caso de uso específico.</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <h3 class="text-lg font-bold text-purple-700 mb-2">Tipos de Slices</h3>
+                            <p>Existen tres categorías principales:</p>
+                            <ul class="list-disc pl-6 mt-2 space-y-2">
+                                <li><strong>eMBB (enhanced Mobile Broadband):</strong> Para banda ancha móvil de alta velocidad (streaming 4K).</li>
+                                <li><strong>mMTC (massive Machine-Type Communications):</strong> Para grandes cantidades de dispositivos IoT de baja potencia.</li>
+                                <li><strong>URLLC (Ultra-Reliable Low-Latency Communications):</strong> Para aplicaciones críticas que requieren latencia sub-5ms y extrema fiabilidad.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <h3 class="text-lg font-bold text-green-700 mb-2">Valor Clave</h3>
+                            <p>Permite servicios de teleproceso críticos como la cirugía robótica remota o la automatización industrial remota al garantizar un slice URLLC de rendimiento garantizado. Este tráfico está completamente separado y no es afectado por el tráfico de banda ancha móvil general (eMBB), lo que lo hace ideal para misiones críticas.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
 
-                <article class="mb-8">
-                    <h3 class="text-2xl font-semibold text-primary mb-4">9. 5G y Network Slicing</h3>
-                    <p class="mb-4">El **Network Slicing** es la capacidad de dividir una infraestructura 5G en múltiples **redes virtuales lógicas e independientes** (*slices*), cada una con un SLA garantizado para un caso de uso específico. </p>
-                    
-                    <ul class="list-disc ml-6 space-y-2">
-                        <li>**URLLC Slice (Ultra-Reliable Low-Latency):** Reservado para aplicaciones críticas como la **automatización industrial remota** y telecirugía con latencia sub-5ms.</li>
-                        <li>**eMBB Slice (Enhanced Mobile Broadband):** Dedicado a usuarios de teleproceso que requieren alta tasa de transferencia (Gbps) para experiencias de AR/VR o video 4K.</li>
-                        <li>**mMTC Slice (Massive Machine-Type Communications):** Para IoT industrial y sensores, con alta densidad (1M dispositivos/km²).</li>
-                    </ul>
-                </article>
+    <!-- Pie de página -->
+    <footer class="bg-primary text-white py-4 text-center">
+        <p>Informe de Teleprocesos - Tecnologías Avanzadas de Interconexión</p>
+    </footer>
 
-                <article>
-                    <h3 class="text-2xl font-semibold text-primary mb-4">10. KPIs de Transformación Digital y ROI</h3>
-                    <p>La implementación de estas arquitecturas se traduce directamente en métricas de negocio para la justificación financiera:</p>
-
-                    <h4 class="text-xl font-medium text-secondary mb-3 border-b pb-2">Indicadores de Éxito</h4>
-                    <ul class="list-disc ml-6 space-y-2">
-                        <li>**Eficiencia Operacional:** Reducción del **Mean Time To Resolve (MTTR)** (target 50%) y aumento de la **Tasa de Automatización** (target 80%).</li>
-                        <li>**Agilidad Empresarial:** Reducción del **Tiempo de Despliegue de Servicios** (target 70%) y capacidad de ajuste en minutos, no semanas.</li>
-                        <li>**Postura de Seguridad:** Reducción del **Riesgo de Exposición** (target 60%) y mejora del puntaje de auditoría mediante ZTA y SASE.</li>
-                    </ul>
-                </article>
-
-                <article class="mt-8">
-                    <h3 class="text-2xl font-semibold text-primary mb-4">11. Consideraciones de Implementación: Estrategia Híbrida</h3>
-                    <p>La migración desde sistemas *legacy* debe seguir un enfoque por fases para mitigar riesgos:</p>
-
-                    <ol class="list-decimal ml-6 space-y-2 font-medium">
-                        <li>**Fase 1 (Assessment):** Mapeo de dependencias de aplicaciones (*dependency mapping*), inventario de sistemas *legacy* y evaluación integral de riesgos.</li>
-                        <li>**Fase 2 (Pilot):** Implementación en **operación paralela** de la nueva tecnología (ej. SD-WAN o ZTNA) en grupos seleccionados (*low-risk, high-impact*).</li>
-                        <li>**Fase 3 (Expansion):** Despliegue incremental, asegurando la **validación de rendimiento continuo** antes de la desactivación del sistema antiguo.</li>
-                        <li>**Fase 4 (Optimization):** Habilitación gradual de funciones avanzadas (AIOps, automatización) y mejora continua.</li>
-                    </ol>
-                </article>
-            </section>
-        </main>
-
-        <footer class="text-center mt-10 p-6 border-t border-gray-300 text-sm text-secondary">
-            <p>&copy; Informe Complementario: Tecnologías Avanzadas de Interconexión. Contenido optimizado con Tailwind CSS.</p>
-        </footer>
-    </div>
+    <script>
+        // Script para el desplazamiento suave al hacer clic en los enlaces del índice
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
